@@ -2,20 +2,20 @@
 <a href='http://www.recurse.com' title='Made with love at the Recurse Center'><img src='https://cloud.githubusercontent.com/assets/2883345/11325206/336ea5f4-9150-11e5-9e90-d86ad31993d8.png' height='20px'/></a>
 
 # Table of Contents
-&nbsp;[Introduction](https://github.com/mtrebi/memory-allocators#introduction)  <br/> 
-&nbsp;[Build instructions](https://github.com/mtrebi/memory-allocators#build-instructions)  <br/> 
-&nbsp;[What's wrong with Malloc?](https://github.com/mtrebi/memory-allocators#whats-wrong-with-malloc)  <br/> 
-&nbsp;[Custom allocators](https://github.com/mtrebi/memory-allocators#custom-allocators)  <br/> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Linear Allocator](https://github.com/mtrebi/memory-allocators#linear-allocator)  <br/> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Stack Allocator](https://github.com/mtrebi/memory-allocators#stack-allocator)  <br/> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Pool Allocator](https://github.com/mtrebi/memory-allocators#pool-allocator)  <br/> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Free list Allocator](https://github.com/mtrebi/memory-allocators#free-list-allocator)  <br/> 
-&nbsp;[Benchmarks](https://github.com/mtrebi/memory-allocators#benchmarks)  <br/> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Time complexity](https://github.com/mtrebi/memory-allocators#time-complexity)  <br/> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Space complexity](https://github.com/mtrebi/memory-allocators#space-complexity)  <br/> 
-&nbsp;[Summary](https://github.com/mtrebi/memory-allocators#summary)  <br/> 
-&nbsp;[Last thoughts](https://github.com/mtrebi/memory-allocators#last-thoughts)  <br/> 
-&nbsp;[Acknowledgments](https://github.com/mtrebi/memory-allocators#acknowledgments)  <br/> 
+&nbsp;[Introduction](#introduction)  <br/> 
+&nbsp;[Build instructions](#build-instructions)  <br/> 
+&nbsp;[What's wrong with Malloc?](#whats-wrong-with-malloc)  <br/> 
+&nbsp;[Custom allocators](#custom-allocators)  <br/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Linear Allocator](#linear-allocator)  <br/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Stack Allocator](#stack-allocator)  <br/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Pool Allocator](#pool-allocator)  <br/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Free list Allocator](#free-list-allocator)  <br/> 
+&nbsp;[Benchmarks](#benchmarks)  <br/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Time complexity](#time-complexity)  <br/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Space complexity](#space-complexity)  <br/> 
+&nbsp;[Summary](#summary)  <br/> 
+&nbsp;[Last thoughts](#last-thoughts)  <br/> 
+&nbsp;[Acknowledgments](#acknowledgments)  <br/> 
 
 # Introduction
 When applications need more memory this can be allocated in the heap (rather than in the stack) in _runtime_. This memory is called 'dynamic memory' because it can't be known at compile time and its need changes during the execution. Our programs can ask for dynamic memory usin 'malloc'. Malloc returns an address to a position in memory where we can store our data. Once we're done with that data, we can call 'free' to free the memory and let others processes use it.
